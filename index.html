@@ -1,0 +1,333 @@
+
+<!--
+<html>
+
+<head>
+  <title>Interactive page</title>
+</head>
+
+<body>
+ <script type="text/javascript">
+    userName = prompt("What is your name?", "");
+
+    userAge = prompt("Your age?", "");
+    userAge = parseFloat(userAge);
+
+    document.write("Hello " + userName + ".")
+    if (userAge < 18) {
+      document.write("  Do your parents know " +
+                     "you are online?");
+    }
+</script>
+
+  <p>The rest of the page...
+</body>
+</html>
+
+
+--------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple HTML with JavaScript</title>
+</head>
+<body>
+    <h1>Hello, PyCharm!</h1>
+
+    <p>Click the button to change the text color.</p>
+
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            var text = document.querySelector("h1");
+            text.style.color = "blue";
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Info Form</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+
+    <form id="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+
+        <label for="studentNumber">Student Number:</label>
+        <input type="text" id="studentNumber" required>
+        <br>
+
+        <button type="button" onclick="displayInfo()">Submit</button>
+    </form>
+
+    <script>
+        function displayInfo() {
+            // Get the values from the input fields
+            var name = document.getElementById("name").value;
+            var studentNumber = document.getElementById("studentNumber").value;
+
+            // Display the information in an alert
+            var message = "Name: " + name + "\nStudent Number: " + studentNumber;
+            alert(message);
+        }
+    </script>
+</body>
+</html>
+--------------------------
+
+
+
+<html>
+
+</head>
+
+<body>
+  <div style="text-align: center">
+    <script type="text/javascript">
+        document.write( "" + Math.max(12,300))
+    </script>
+  </div>
+</body>
+</html>
+
+-------------------------
+
+<html>
+
+</head>
+
+<body>
+  <div style="text-align: center">
+    <script type="text/javascript">
+        document.write( "" + Math.max(12,300))
+    </script>
+  </div>
+</body>
+</html>
+--------------------------------------------------------------
+THE FIRST ARRAY EXAMPLE
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <script type="text/javascript">
+            // Declare the array and initialize its values
+            let items = new Array(10);
+            for (let i = 0; i < items.length; i++) {
+                items[i] = `Item ${i + 1}`; // Initialize each element to a string value
+                document.write(items[i] + "<br>");
+            }
+        </script>
+    </div>
+</body>
+</html>
+---------------
+THE SECOND EXAMPLE
+
+<html>
+<body>
+
+<script type="text/javascript">
+let i;
+let mycars = new Array();
+mycars[0] = "Saab";
+mycars[1] = "Volvo";
+mycars[2] = "BMW";
+
+for (i=0;i<mycars.length;i++)
+{
+document.write(mycars[i] + "<br />");
+}
+</script>
+
+</body>
+</html>
+----------------------------
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Exercise</title>
+</head>
+<body>
+    <h2>Fruit List</h2>
+    <div id="output"></div> ' This div will display the list of fruits -->
+<!--
+    <script type="text/javascript">
+        // Step 1: Declare and initialize an array of fruits
+        let fruits = ["Apple", "Banana", "Cherry", "Mango", "Orange"];
+
+        // Step 2: Use a for loop to go through each fruit
+        let outputDiv = document.getElementById("output"); // Get the output div
+        for (let i = 0; i < fruits.length; i++) {
+            // Step 3: Display each fruit
+            outputDiv.innerHTML += fruits[i] + "<br>";
+        }
+    </script>
+</body>
+</html>
+-----------------------------
+
+-->
+<!---
+// 1. Function Declarations
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+// 2. Function Expression
+const multiply = function(a, b) {
+  return a * b;
+};
+
+// 3. Arrow Function
+const divide = (a, b) => {
+  if (b === 0) {
+    return "Cannot divide by zero!";
+  }
+  return a / b;
+};
+
+// 4. Higher-Order Function (takes another function as a parameter)
+function calculate(operation, a, b) {
+  return operation(a, b);
+}
+
+// Using the functions
+console.log("Addition:", calculate(add, 5, 3));          // Output: Addition: 8
+console.log("Subtraction:", calculate(subtract, 5, 3));  // Output: Subtraction: 2
+console.log("Multiplication:", calculate(multiply, 5, 3)); // Output: Multiplication: 15
+console.log("Division:", calculate(divide, 6, 3));       // Output: Division: 2
+
+// Testing division by zero
+console.log("Division by zero:", calculate(divide, 6, 0)); // Output: Cannot divide by zero!
+-----------------------------
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .calculator {
+      border: 2px solid #333;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    input, select, button {
+      font-size: 1rem;
+      padding: 5px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <label for="num1">First Number:</label>
+    <input type="number" id="num1" placeholder="Enter first number">
+
+    <label for="num2">Second Number:</label>
+    <input type="number" id="num2" placeholder="Enter second number">
+
+    <label for="operation">Operation:</label>
+    <select id="operation">
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+
+    <button onclick="performCalculation()">Calculate</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    // Define the operations
+    function add(a, b) {
+      return a + b;
+    }
+
+    function subtract(a, b) {
+      return a - b;
+    }
+
+    const multiply = function(a, b) {
+      return a * b;
+    };
+
+    const divide = (a, b) => {
+      if (b === 0) {
+        return "Cannot divide by zero!";
+      }
+      return a / b;
+    };
+
+    // Higher-order function to perform the calculation
+    function calculate(operation, a, b) {
+      return operation(a, b);
+    }
+
+    // Main function to get inputs, perform calculation, and display result
+    function performCalculation() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      const operation = document.getElementById("operation").value;
+
+      let result;
+      switch (operation) {
+        case "add":
+          result = calculate(add, num1, num2);
+          break;
+        case "subtract":
+          result = calculate(subtract, num1, num2);
+          break;
+        case "multiply":
+          result = calculate(multiply, num1, num2);
+          break;
+        case "divide":
+          result = calculate(divide, num1, num2);
+          break;
+        default:
+          result = "Invalid operation";
+      }
+
+      document.getElementById("result").innerText = `Result: ${result}`;
+    }
+  </script>
+
+</body>
+</html>
